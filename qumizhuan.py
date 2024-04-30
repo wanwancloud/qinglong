@@ -58,7 +58,7 @@ class yuanshen():  # 定义一个类
             data = {"source": f"{i}"}
             r = requests.post(url, headers=self.headers1, json=data).json()
             if r['code'] == 2000:
-                print(f"🎉 第{a}次用观看视频成功")
+                print(f"🎉 第{a}次观看视频成功")
             else:
                 print(f"❌ 第{a}次观看视频失败---[{r['msg']}]")
             time.sleep(random.randint(30, 60))
@@ -88,5 +88,5 @@ class yuanshen():  # 定义一个类
 
 version()
 main = yuanshen()
-#main.watch()
+main.watch()
 main.trade()
